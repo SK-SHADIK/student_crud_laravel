@@ -16,8 +16,7 @@
                 <div class="recent-payments">
                     <div class="title">
                         <h2>STUDENT DETAILS</h2>
-                        <!-- <input type="search" placeholder="Search Here..."> -->
-                        <a href="" class="btn">Add A Student</a>
+                        <a href="{{route('create.student')}}" class="btn">Add A Student</a>
                     </div>
                     <table border="01">
                         <tr>
@@ -31,8 +30,8 @@
                             <td>{{$student['id']}}</td>
                             <td>{{$student['name']}}</td>
                             <td>{{$student['email']}}</td>
-                            <td><a href="/edit/{{$student['id']}}" class="btn">Edit</a></td>
-                            <td><a href="/delete/{{$student['id']}}" class="btn">Delete</a></td>
+                            <td><a href="/edit-student/{{$student['id']}}" class="btn">Edit</a></td>
+                            <td><a href="/delete-student/{{$student['id']}}" class="btn">Delete</a></td>
                         </tr>
                         @endforeach
                         
