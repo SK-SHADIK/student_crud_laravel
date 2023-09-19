@@ -36,7 +36,7 @@ class StudentController extends Controller
         $st->email= $request->email;
         $st->save();
         
-        return redirect()->back('view.student');
+        return redirect()->route('view.student')->with('success', 'Student has been added successfully');
     
     }
     public function showStudent($id){
@@ -63,13 +63,13 @@ class StudentController extends Controller
         $st->email = $req->email;
         $st->save();
         
-        return redirect()->route('view.student');
+        return redirect()->route('view.student')->with('success', 'Student details has been updated successfully');
     }
     public function deleteStudent(Request $request){
 
         $id = $request->id;
         $data = Student::where('id', $id)->first();
         $data->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Student has been deleted successfully');
     }
 }
