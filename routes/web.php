@@ -24,4 +24,6 @@ Route::post('/store-student',[StudentController::class, 'storeStudent'])->name('
 Route::get('/edit-student/{id}',[StudentController::class,'showStudent'])->name('edit.student');
 Route::post('/edit-store-student',[StudentController::class,'editstudent'])->name('edit.store.student');
 Route::get('/delete-student/{id}',[StudentController::class,'deleteStudent'])->name('delete.student');
+Route::get('/show-json-student',[StudentController::class,'jsonStudentList']);
+Route::get('/create-json-student',[StudentController::class,'jsonStudentCreate']);
 

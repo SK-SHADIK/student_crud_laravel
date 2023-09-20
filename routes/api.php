@@ -19,7 +19,6 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 Route::get('/view-students',[StudentApiController::class, 'viewApiStudent']);
-Route::get('/create-students',[StudentApiController::class, 'createApiStudent']);
 Route::post('/store-students',[StudentApiController::class, 'storeApiStudent']);
 Route::get('/show-students/{id}',[StudentApiController::class, 'showApiStudent']);
 Route::post('/edit-students',[StudentApiController::class, 'editApiStudent']);

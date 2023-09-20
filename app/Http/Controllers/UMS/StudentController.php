@@ -72,4 +72,11 @@ class StudentController extends Controller
         $data->delete();
         return redirect()->back()->with('success', 'Student has been deleted successfully');
     }
+
+    public function jsonStudentList(){
+        return view('studentListJson');
+    }
+    public function jsonStudentCreate(){
+        return view('studentJsoncreate');
+    }
 }
