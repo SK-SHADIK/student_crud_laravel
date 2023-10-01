@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/view-student',[StudentController::class, 'viewStudent'])->name('view.student');
+Route::get('/',[StudentController::class, 'viewStudent'])->name('view.student');
 Route::get('/create-student',[StudentController::class, 'createStudent'])->name('create.student');
 Route::post('/store-student',[StudentController::class, 'storeStudent'])->name('store.student');
 Route::get('/edit-student/{id}',[StudentController::class,'showStudent'])->name('edit.student');
